@@ -1,0 +1,14 @@
+version: 0.2
+
+phases:
+  build:
+    commands:
+      - echo "Starting application build"
+      - mkdir -p output
+      - cp index.html output/index.html
+      - echo "Application build completed"
+
+artifacts:
+  base-directory: output
+  files:
+    - '**/*'
