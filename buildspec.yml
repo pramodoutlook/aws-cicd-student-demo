@@ -4,11 +4,11 @@ phases:
   build:
     commands:
       - echo "Starting application build"
-      - mkdir -p output
-      - cp index.html output/index.html
-      - echo "Application build completed"
+      - test -f index.html
+      - echo "Checking application files"
+      - ls -la
+      - echo "Build completed successfully"
 
 artifacts:
-  base-directory: output
   files:
-    - '**/*'
+    - index.html
