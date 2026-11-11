@@ -1,20 +1,200 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My First AWS CI/CD Application</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login Form</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #bb2ddb; /* purple background */
+    }
+
+    .card {
+      width: 430px;
+      background: #fff;
+      border-radius: 6px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+      padding: 36px 28px 30px;
+    }
+
+    .card h1 {
+      text-align: center;
+      font-size: 34px;
+      font-weight: 700;
+      margin-bottom: 26px;
+      color: #111;
+    }
+
+    .social-buttons {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 28px;
+    }
+
+    .social-btn {
+      flex: 1;
+      border: none;
+      border-radius: 4px;
+      padding: 14px 0;
+      color: #fff;
+      font-size: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      cursor: pointer;
+    }
+
+    .facebook {
+      background: #3b5998;
+    }
+
+    .twitter {
+      background: #1da1f2;
+    }
+
+    .social-btn i {
+      font-size: 20px;
+    }
+
+    .input-group {
+      position: relative;
+      margin-bottom: 20px;
+    }
+
+    .input-group i {
+      position: absolute;
+      top: 50%;
+      left: 16px;
+      transform: translateY(-50%);
+      color: #8a8a8a;
+      font-size: 18px;
+    }
+
+    .input-group input {
+      width: 100%;
+      height: 58px;
+      border: 1px solid #d7d7d7;
+      border-radius: 4px;
+      outline: none;
+      padding: 0 16px 0 48px;
+      font-size: 18px;
+      color: #333;
+      background: #fff;
+    }
+
+    .input-group input::placeholder {
+      color: #9a9a9a;
+    }
+
+    .options {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 18px;
+      font-size: 17px;
+      color: #4b4b4b;
+    }
+
+    .remember {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .remember input {
+      width: 16px;
+      height: 16px;
+      accent-color: #b92ddb;
+    }
+
+    .forgot {
+      color: #b35ad6;
+      text-decoration: none;
+    }
+
+    .login-btn {
+      width: 100%;
+      border: none;
+      border-radius: 4px;
+      background: linear-gradient(90deg, #b92ddb, #b92ddb);
+      color: #fff;
+      font-size: 22px;
+      font-weight: 600;
+      padding: 16px 0;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(185, 45, 219, 0.35);
+      margin-bottom: 28px;
+    }
+
+    .signup {
+      text-align: center;
+      font-size: 18px;
+      color: #333;
+    }
+
+    .signup a {
+      color: #b35ad6;
+      text-decoration: none;
+    }
+
+    /* Simple icon fallback using text */
+    .fb-icon::before { content: "f"; font-weight: bold; font-size: 24px; }
+    .tw-icon::before { content: "t"; font-weight: bold; font-size: 22px; }
+
+    .user-icon::before { content: "👤"; }
+    .lock-icon::before { content: "🔒"; }
+  </style>
 </head>
-
 <body>
-    <h1>My First Automated AWS Deployment!</h1>
+  <div class="card">
+    <h1>Login Form</h1>
 
-    <h2>My First Automated Deployment</h2>
+    <div class="social-buttons">
+      <button class="social-btn facebook">
+        <i class="fb-icon"></i>
+        <span>Facebook</span>
+      </button>
+      <button class="social-btn twitter">
+        <i class="tw-icon"></i>
+        <span>Twitter</span>
+      </button>
+    </div>
 
-    <p>
-        This application is deployed using
-        AWS CodePipeline and AWS CodeBuild.
-    </p>
+    <div class="input-group">
+      <i class="user-icon"></i>
+      <input type="text" placeholder="Email or Phone" />
+    </div>
 
-    <p>Learning AWS DevOps is exciting!</p>
+    <div class="input-group">
+      <i class="lock-icon"></i>
+      <input type="password" placeholder="Password" />
+    </div>
 
+    <div class="options">
+      <label class="remember">
+        <input type="checkbox" />
+        <span>Remember me</span>
+      </label>
+      <a href="#" class="forgot">Forgot password?</a>
+    </div>
+
+    <button class="login-btn">Login</button>
+
+    <div class="signup">
+      Not a member? <a href="#">Signup now</a>
+    </div>
+  </div>
 </body>
 </html>
